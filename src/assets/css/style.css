@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+a.link,
+a:any-link {
+  color: #af6213;
+  text-decoration: none;
+}
+
+a.logo {
+  color: #af6213;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  color: #532d09;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.aside {
+  text-align: right;
+}
+
+.footer {
+  font-size: 1.23607rem;
+  text-align: right;
+}
+
+.footer__link {
+  color: #af6213;
+}
+
+.img-container {
+  margin-bottom: 10em;
+  text-align: right;
+}
+
+.img-container:last-of-type {
+  margin-bottom: 0;
+}
+
+.img-container__description {
+  text-align: right;
+}
+
+.img-container__img {
+  max-height: 70vh;
+  max-width: 100%;
+}
+
+.img-container__title {
+  font-weight: bold;
+}
+
+.imgs-group {
+  display: flex;
+  justify-content: space-between;
+  /* align-items is a workaround for a Safari issue. Workaround from Stack Overflow: https://stackoverflow.com/questions/57516373 */
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: 5em;
+}
+
+.imgs-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.imgs-group-2 img {
+  flex: 1 1 0;
+  max-width: 45%;
+}
+
+.imgs-group-3 img {
+  flex: 1 1 0;
+  max-width: calc(80% / 3);
+}
+
+.imgs-group-4 img {
+  flex: 1 1 0;
+  max-width: calc(70% / 4);
+}
+
+.imgs--index > .img-container:last-child {
+  display: none;
+}
+
+.logo {
+  font-size: 3.23606rem;
+}
+
+.nav__entry {
+  font-size: 1.61803rem;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  list-style-type: none;
+}
+
+.summary-entry__key {
+  padding-right: 1em;
+  text-align: left;
+}
+
+.wrapper {
+  display: grid;
+  justify-items: end;
+  gap: 3em;
+}
+
+@media (min-width: 850px) {
+  main {
+    justify-self: start;
+  }
+
+  .aside {
+    flex: 1 1 100px;
+  }
+
+  .imgs--index {
+    display: flex;
+  }
+
+  .imgs--index > .img-container {
+    margin-right: 1em;
+  }
+
+  .imgs--index > .img-container:last-child {
+    display: initial;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr 4fr;
+    align-items: start;
+    margin: 5%;
+  }
+}

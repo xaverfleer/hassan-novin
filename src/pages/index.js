@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import Helmet from 'react-helmet'
 
@@ -34,14 +35,11 @@ const page = () => {
         Tellerservice.
       </p>
       <h2>Kostproben für's Auge</h2>
-      {/* todo */}
+      <p>Kostproben folgen.</p>
       <h2>Kontakt</h2>
-      Ich freue mich über Ihre Frage, Ihren Spezialwunsch, Ihre Anregung oder
-      sonstige Nachricht auf{' '}
-      <a href="mailto:xaver.fleer+orient-bern@gmail.com">
-        xaver.fleer+orient-bern@gmail.com
-      </a>{' '}
-      oder <a href="tel:+41774466505">077 44 66 505</a>.
+      Ich freue mich über Ihre Anfrage, Ihren Spezialwunsch, Ihre Frage, Ihre
+      Anregung oder sonstige Nachricht.{' '}
+      <Link to={'/contact'}>→ Kontaktformular</Link>
     </Layout>
   )
 }

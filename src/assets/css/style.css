@@ -10,6 +10,10 @@ a.logo {
   color: #af6213;
 }
 
+h1 {
+  margin-block-start: 0;
+}
+
 html {
   font-size: 62.5%;
 }

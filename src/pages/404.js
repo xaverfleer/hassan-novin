@@ -7,7 +7,7 @@ const NotFoundPage = ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>f-save | Seite nicht gefunden</title>
+        <title>bern-orient | Seite nicht gefunden</title>
         <meta name="description" content="Seite nicht gefunden" />
         <meta name="robots" content="noindex" />
       </Helmet>

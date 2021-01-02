@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 
 const page = () => {
-  const siteDescription = 'bern-orient.ch | Orientalisches Catering in Bern'
+  const siteDescription = 'Orientalisches Catering in Bern.'
 
   return (
     <Layout>

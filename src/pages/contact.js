@@ -100,7 +100,7 @@ function handleSubmit(event) {
 }
 
 const page = () => {
-  const siteDescription = 'f-save | Contact'
+  const siteDescription = 'bern-orient | Kontakt'
 
   return (
     <Layout>

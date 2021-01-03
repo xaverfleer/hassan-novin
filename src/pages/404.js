@@ -12,14 +12,12 @@ const NotFoundPage = ({ data }) => {
         <meta name="robots" content="noindex" />
       </Helmet>
 
-      <div id="main">
-        <h1>Seite nicht gefunden</h1>
-        <p>
-          Die Seite ist entweder momentan nicht verfügbar, wurde verschoben oder
-          existiert nicht mehr.
-        </p>
-        <Link to="/">← Zurück zur Startseite</Link>
-      </div>
+      <h1>Seite nicht gefunden</h1>
+      <p>
+        Die Seite ist entweder momentan nicht verfügbar, wurde verschoben oder
+        existiert nicht mehr.
+      </p>
+      <Link to="/">← Zurück zur Startseite</Link>
     </Layout>
   )
 }

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Xaver Fleer",
   "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
     "gatsby": "^2.26.0",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-manifest": "^2.6.0",

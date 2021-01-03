@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
 
-const contactEmail = 'xaver.fleer+bern-orient@gmail.com'
+const contactEmail = 'essen@bern-orient.ch'
 
 const ContactFormEntry = ({ props }) => {
   function handleInputChange(e) {
@@ -82,7 +82,7 @@ function handleSubmit(event) {
   const formElem = event.currentTarget
   const payload = getPayload(formElem)
   const xhr = new XMLHttpRequest()
-  xhr.open('POST', `/.netlify/functions/sendMessage`)
+  xhr.open('POST', `/api/sendMessage.js`)
   xhr.send(payload)
   xhr.addEventListener('load', () => {
     switch (xhr.status) {

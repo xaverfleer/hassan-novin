@@ -1,10 +1,10 @@
-// const logging = require('./private/logging')
-// const mailing = require('./private/mailing')
-// const responding = require('./private/responding')
+const logging = require('./private/logging')
+const mailing = require('./private/mailing')
+const responding = require('./private/responding')
 
 module.exports = function absenden(req, res) {
-  // logging.logStart('Start sendMessage.js')
-  // const respond = responding.responseHandlers(callback)
+  logging.logStart('Start sendMessage.js')
+  const respond = responding.responseHandlers(callback)
 
   // const parsedBody = JSON.parse(event.body)
 

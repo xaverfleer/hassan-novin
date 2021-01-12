@@ -40,14 +40,14 @@ const page = ({ data }) => {
       <div className="gallery">
         <article alt="Fladenbrot" className="gallery__entry">
           <Img fluid={data.file.childImageSharp.fluid} />
-          <h3>Fladenbrot</h3>
-          <p>
+          <h3>Fladenbrot mit Petersilie</h3>
+          {/* <p>
             Fladenbrot wird auch oft als Ersatz von Tellern benutzt. Die wohl
             mit Abstand beliebteste und modernste Variation von Fladenbrot ist
             Pizza und Focaccia. Wie gesund ist Fladenbrot? Wie andere Brote
             auch, enthält Fladenbrot viele Ballaststoffe und Kohlenhydrate. Das
             heißt, es macht satt. Unser Körper läuft auf Kohlenhydrate.
-          </p>
+          </p> */}
         </article>
       </div>
       <h2>Kontakt</h2>

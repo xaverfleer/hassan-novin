@@ -12,11 +12,11 @@
 - ✅ add email address essen@bern-orient.ch
   - ✅ add essen@bern-orient.ch to contact form
     - ✅ make sure contact form works
+- ✅ check lebensmittelgesetz (ingwerer, crepes)
 
 # todo
 
 - add menu samples
-- check lebensmittelgesetz (ingwerer, crepes)
 - add to google and bing
 
 # possible business models

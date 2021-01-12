@@ -19,7 +19,9 @@
 - add menu samples
   - ✅ add one image
   - ✅ add gatsby image (equivalent)
+  - ✅ read content from index.md
   - add netlifyCMS
+- translate message-submitted.js
 - add to google and bing
 
 # possible business models

@@ -120,7 +120,7 @@ body {
 }
 
 .gallery__entry {
-  max-width: 50%;
+  flex: 0 1 50%;
   margin: 0 1em 2em 0;
 }
 

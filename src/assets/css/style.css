@@ -120,7 +120,6 @@ body {
 }
 
 .gallery__entry {
-  flex: 0 1 50%;
   margin: 0 1em 2em 0;
 }
 
@@ -208,6 +207,12 @@ body {
   display: grid;
   justify-items: end;
   gap: 3em;
+}
+
+@media (min-width: 450px) {
+  .gallery__entry {
+    flex: 0 1 50%;
+  }
 }
 
 @media (min-width: 850px) {

@@ -111,6 +111,10 @@ body {
   color: #af6213;
 }
 
+.gatsby-image-wrapper img {
+  border-radius: 8px;
+}
+
 .gallery {
   display: flex;
 }

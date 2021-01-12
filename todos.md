@@ -17,6 +17,9 @@
 # todo
 
 - add menu samples
+  - ✅ add one image
+  - ✅ add gatsby image (equivalent)
+  - add netlifyCMS
 - add to google and bing
 
 # possible business models

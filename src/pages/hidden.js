@@ -39,8 +39,7 @@ const page = ({ data }) => {
       <h2>Kostproben für's Auge</h2>
       <div className="gallery">
         <article alt="Fladenbrot" className="gallery__entry">
-          <img className="gallery__img" src={data.file.publicURL} />
-          {/* <Img fluid={thumbnail} /> */}
+          <Img fluid={data.file.childImageSharp.fluid} />
           <h3>Fladenbrot</h3>
           <p>
             Fladenbrot wird auch oft als Ersatz von Tellern benutzt. Die wohl
@@ -62,7 +61,11 @@ const page = ({ data }) => {
 export const pageQuery = graphql`
   {
     file(relativePath: { eq: "fladenbrot.jpg" }) {
-      publicURL
+      childImageSharp {
+        fluid(maxWidth: 400, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `

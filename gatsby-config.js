@@ -16,6 +16,8 @@ module.exports = {
     description: 'Orientalisches Catering in Bern.',
   },
   plugins: [
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: { name: `img`, path: `${__dirname}/static/img/` },

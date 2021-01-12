@@ -6,7 +6,11 @@ module.exports = {
   sendEmail(message) {
     const messageWithSender = {
       ...message,
-      bcc: [{ email: 'xaver.fleer+bern-orient@gmail.com' }],
+      bcc: [
+        { email: 'novahassan23@gmail.com ' },
+        { email: 'xaver.fleer+bern-orient@gmail.com' },
+      ],
+
       from: 'webformular@bern-orient.ch',
     }
     return sgMail.send(messageWithSender)

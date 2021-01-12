@@ -8,6 +8,8 @@ import Layout from '../components/Layout'
 const page = ({ data }) => {
   const siteDescription = 'Orientalisches Catering in Bern.'
 
+  const { frontmatter } = data.md
+
   return (
     <Layout>
       <Helmet>
@@ -15,55 +17,69 @@ const page = ({ data }) => {
         <meta name="description" content={siteDescription} />
         <meta name="robots" content="noindex" />
       </Helmet>
-      <h1>Orientalisches Catering in Bern</h1>
-      <h2>Über mich</h2>
-      <p>
-        Für mich ist orientalisches Essen ein Fenster in meine Heimat. Gerichte
-        zubereiten, wie ich sie aus meiner Heimat kenne, erfüllt mich mit Freude
-        und Leben. Und nicht nur mich: wer mein Essen kennt, weiss was ich
-        meine.
-      </p>
-      <h2>Angebot</h2>
-      <h3>Beratung</h3>
-      <p>
-        Gerne Berate ich Sie bei der Wahl des passenden Menüs, perfekt
-        abgestimmt auf Ihren Anlass. Von Albalu Polow über Falafel, Kuku,
-        Nargesi bis Zeytun parvarde fehlt nichts in meinem Repertoire.
-      </p>
-      <h3>Kochen, Lieferung und Service</h3>
-      <p>
-        Ich bereite das Essen in meiner Küche vor und liefere es Essbereit an
-        Ihren Anlass. Auf Wunsch serviere ich das Essen am Buffet oder als
-        Tellerservice.
-      </p>
-      <h2>Kostproben für's Auge</h2>
+      <h1>{frontmatter.heading}</h1>
+      <h2>{frontmatter.aboutMe.heading}</h2>
+      <p>{frontmatter.aboutMe.description}</p>
+      <h2>{frontmatter.offer.heading}</h2>
+      {frontmatter.offer.offers.map((o) => (
+        <>
+          <h3>{o.heading}</h3>
+          <p>{o.description}</p>
+        </>
+      ))}
+      <h2>{frontmatter.gallery.heading}</h2>
       <div className="gallery">
-        <article alt="Fladenbrot" className="gallery__entry">
-          <Img fluid={data.file.childImageSharp.fluid} />
-          <h3>Fladenbrot mit Petersilie</h3>
-          {/* <p>
-            Fladenbrot wird auch oft als Ersatz von Tellern benutzt. Die wohl
-            mit Abstand beliebteste und modernste Variation von Fladenbrot ist
-            Pizza und Focaccia. Wie gesund ist Fladenbrot? Wie andere Brote
-            auch, enthält Fladenbrot viele Ballaststoffe und Kohlenhydrate. Das
-            heißt, es macht satt. Unser Körper läuft auf Kohlenhydrate.
-          </p> */}
-        </article>
+        {frontmatter.gallery.entries.map((e) => (
+          <article className="gallery__entry">
+            <Img fluid={e.img.childImageSharp.fluid} />
+            <h3>{e.heading}</h3>
+            <p>{e.description}</p>
+          </article>
+        ))}
       </div>
-      <h2>Kontakt</h2>
-      Ich freue mich über Ihre Anfrage, Ihren Spezialwunsch, Ihre Frage, Ihre
-      Anregung oder sonstige Nachricht.{' '}
-      <Link to={'/contact'}>→ Kontaktformular</Link>
+      <h2>{frontmatter.contact.heading}</h2>
+      <p>
+        {frontmatter.contact.description}{' '}
+        <Link to={'/contact'}>→&nbsp;Kontaktformular</Link>
+      </p>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
   {
-    file(relativePath: { eq: "fladenbrot.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 300) {
-          ...GatsbyImageSharpFluid
+    md: markdownRemark(frontmatter: { templateKey: { eq: "landingPage" } }) {
+      frontmatter {
+        heading
+        aboutMe {
+          heading
+          description
+        }
+        offer {
+          heading
+          offers {
+            heading
+            description
+          }
+        }
+        gallery {
+          heading
+          entries {
+            alt
+            description
+            heading
+            img {
+              childImageSharp {
+                fluid(maxWidth: 400, maxHeight: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+        contact {
+          heading
+          description
         }
       }
     }

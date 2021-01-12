@@ -111,6 +111,18 @@ body {
   color: #af6213;
 }
 
+.gallery {
+  display: flex;
+}
+
+.gallery__entry {
+  max-width: 50%;
+}
+
+.gallery__img {
+  width: 100%;
+}
+
 .img-container {
   margin-bottom: 10em;
   text-align: right;

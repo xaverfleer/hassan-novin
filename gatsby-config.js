@@ -11,10 +11,9 @@ module.exports = {
     )
   },
   siteMetadata: {
-    title: 'Permakultur Handwerk | Denis Peter',
+    title: 'Bern Orient | Orientalisches Catering in Bern',
     author: 'Xaver Fleer',
-    description:
-      'Permakultur Bern | Beratung, Planung und Gestaltung von Permakultur-Projekten',
+    description: 'Orientalisches Catering in Bern.',
   },
   plugins: [
     {

@@ -117,6 +117,7 @@ body {
 
 .gallery__entry {
   max-width: 50%;
+  margin: 0 1em 2em 0;
 }
 
 .gallery__img {

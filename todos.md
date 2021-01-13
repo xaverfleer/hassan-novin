@@ -13,16 +13,15 @@
   - ✅ add essen@bern-orient.ch to contact form
     - ✅ make sure contact form works
 - ✅ check lebensmittelgesetz (ingwerer, crepes)
-
-# todo
-
-- add menu samples
+- ✅ add menu samples
   - ✅ add one image
   - ✅ add gatsby image (equivalent)
   - ✅ read content from index.md
   - ✅ add netlifyCMS
 - ✅ translate message-submitted.js
-- add to google and bing
+- ✅ add to google and bing
+
+# todo
 
 # possible business models
 

@@ -39,6 +39,10 @@ module.exports = {
         icon: 'static/favicon-32x32.png',
       },
     },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: { modulePath: `${__dirname}/src/cms/cms.js` },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
   ],

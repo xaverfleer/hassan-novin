@@ -1,0 +1,85 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/img
+public_folder: ../../static/img
+
+site_url: https://bern-orient.netlify.app/
+
+collections:
+  - label: 'Pages'
+    name: 'pages'
+    files:
+      - label: 'Landing Page'
+        name: 'index'
+        file: 'content/pages/index.md'
+        fields:
+          - label: 'Template key'
+            name: 'templateKey'
+            widget: 'hidden'
+            default: 'landingPage'
+          - label: 'Überschrift'
+            name: 'heading'
+            widget: 'string'
+          - label: 'Über mich'
+            name: 'aboutMe'
+            widget: 'object'
+            fields:
+              - label: 'Überschrift'
+                name: 'heading'
+                widget: 'string'
+              - label: 'Beschreibung'
+                name: 'description'
+                widget: 'text'
+          - label: 'Angebot'
+            name: 'offer'
+            widget: 'object'
+            fields:
+              - label: 'Überschrift'
+                name: 'heading'
+                widget: 'string'
+              - label: 'Angebote'
+                name: 'offers'
+                widget: 'list'
+                fields:
+                  - label: 'Überschrift'
+                    name: 'heading'
+                    widget: 'string'
+                    default: 'Angebot'
+                  - label: 'Beschreibung'
+                    name: 'description'
+                    widget: 'text'
+                    default: 'Mein Angebot beinhaltet ...'
+          - label: 'Galerie'
+            name: 'gallery'
+            widget: 'object'
+            fields:
+              - label: 'Überschrift'
+                name: 'heading'
+                widget: 'string'
+              - label: 'Einträge'
+                name: 'entries'
+                widget: 'list'
+                fields:
+                  - label: 'Überschrift'
+                    name: 'heading'
+                    widget: 'string'
+                    default: 'Leckerbissen'
+                  - label: 'Beschreibung'
+                    name: 'description'
+                    widget: 'text'
+                    default: 'Dieser Leckerbissen stammt aus ...'
+                  - label: Image
+                    name: img
+                    widget: image
+          - label: 'Kontakt'
+            name: 'contact'
+            widget: 'object'
+            fields:
+              - label: 'Überschrift'
+                name: 'heading'
+                widget: 'string'
+              - label: 'Beschreibung'
+                name: 'description'
+                widget: 'text'

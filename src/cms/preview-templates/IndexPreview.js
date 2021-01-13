@@ -5,7 +5,7 @@ const absLink = (relLink) => (relLink ? relLink.split('../../static')[1] : '')
 export default ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
 
-  data.gallery = data.gallery.map((g) => ({
+  data.gallery.entries = data.gallery.entries.map((g) => ({
     ...g,
     img: {
       childImageSharp: { fluid: { aspectRatio: 1.33, src: absLink(g.img) } },
@@ -14,7 +14,7 @@ export default ({ entry }) => {
 
   return index({
     data: {
-      allMarkdownRemark: { nodes: [{ frontmatter: { ...data } }] },
+      md: { frontmatter: { ...data } },
     },
   })
 }

@@ -5,19 +5,17 @@ import Layout from '../components/Layout'
 
 export default () => {
   const siteDescription =
-    'Your message was submitted. Thank you for your message.'
+    'Ihre Nachricht wurde gesende. Vielen Dank für Ihre Nachricht.'
 
   return (
     <Layout>
       <Helmet>
-        <title>bern-orient | Message is submitted</title>
+        <title>bern-orient | Nachricht wurde gesendet</title>
         <meta name="description" content={siteDescription} />
         <meta name="robots" content="noindex" />
       </Helmet>
-      <h1>Message is submitted</h1>
-      <p>
-        Thank you very much for your message. I will reply as soon as possible.
-      </p>
+      <h1>Nachricht wurde gesendet</h1>
+      <p>Vielen Dank für Ihre Nachricht. Ich antworte so bald wie möglich.</p>
     </Layout>
   )
 }
